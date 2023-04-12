@@ -1,3 +1,12 @@
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-5px) rotate(-5deg); }
+    40% { transform: translateX(5px) rotate(5deg); }
+    60% { transform: translateX(-5px) rotate(-5deg); }
+    80% { transform: translateX(5px) rotate(5deg); }
+    100% { transform: translateX(0); }
+}
+
 body {
     font-family: sans-serif;
     margin: 0;
@@ -8,6 +17,7 @@ body {
   .container {
     margin: 20px auto;
     max-width: 600px;
+    padding-right: 20px;
   }
   
   h1 {
@@ -40,44 +50,68 @@ body {
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.2s;
+   
   }
   
   li button:hover {
     background: #0062cc;
+
   }
   
   input[type="text"] {
-    padding: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
     border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
   }
   
   button[type="submit"] {
-    background: #007bff;
-    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #007bff;
     border: none;
-    padding: 5px 10px;
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    transition: background 0.2s;
+    transition: box-shadow 0.3s ease-in-out;
+
   }
   
   button[type="submit"]:hover {
     background: #0062cc;
+    margin-top: 10px;
+   
+    
   }
   
   .App {
     max-width: 600px;
     margin: 0 auto;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+
   }
   
   form {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;    
+    align-content: flex-start;
   }
   
   input[type="text"],
@@ -90,22 +124,34 @@ body {
   
   input[type="text"] {
     flex: 1;
-  }
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    padding: 5px;
+    background: #ffffff;
+    color: #000000;
+    
+    }
+
+
   
   button[type="submit"] {
     background-color: #0077cc;
     color: #fff;
-    cursor: pointer;
+    margin-left: 5px;
   }
   
   button[type="submit"]:hover {
     background-color: #005fa3;
+   
   }
   
   table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    margin-left: 40px;
+    border-radius: 5px;
   }
   
   thead tr th {
@@ -113,15 +159,18 @@ body {
     background-color: #eee;
     padding: 10px;
     border: 1px solid #ccc;
+    text-align: right;
   }
   
   tbody tr td {
     padding: 10px;
     border: 1px solid #ccc;
+    text-align: left;
   }
   
   tbody tr:nth-child(even) {
     background-color: #f2f2f2;
+    text-align: right;
   }
   
   td:last-child {
@@ -129,14 +178,36 @@ body {
   }
   
   button {
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: #0077cc;
-    color: #fff;
-    cursor: pointer;
+    background-color: #4c82af; /* cor de fundo */
+    border: none; /* sem borda */
+    color: white; /* cor do texto */
+    padding: 12px 24px; /* espaçamento interno */
+    text-align: center; /* alinhamento do texto */
+    text-decoration: none; /* sem decoração */
+    display: inline-block; /* exibição em bloco */
+    font-size: 16px; /* tamanho da fonte */
+    margin: 4px 2px; /* margem externa */
+    cursor: pointer; /* cursor do mouse */
+    border-radius: 10px; /* borda arredondada */
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); /* sombra */
+    transition: background-color 0.3s ease; /* transição suave */
+      
   }
   
   button:hover {
-    background-color: #005fa3;
+  background-color: #4CAF50; /* cor de fundo */
+  border: none; /* sem borda */
+  color: white; /* cor do texto */
+  padding: 12px 24px; /* espaçamento interno */
+  text-align: center; /* alinhamento do texto */
+  text-decoration: none; /* sem decoração */
+  display: inline-block; /* exibição em bloco */
+  font-size: 16px; /* tamanho da fonte */
+  margin: 4px 2px; /* margem externa */
+  cursor: pointer; /* cursor do mouse */
+  border-radius: 10px; /* borda arredondada */
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); /* sombra */
+  transition: background-color 0.3s ease; /* transição suave */
+  
+      
   }

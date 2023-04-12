@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Meu CRUD Simples</h1>
+      <h1>CRUD Portfolio Em React.js</h1>
       <AddItem addItem={addItem} />
       <ItemList
         items={items}
