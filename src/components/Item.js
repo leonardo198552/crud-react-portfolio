@@ -30,7 +30,7 @@ function Item({ index, item, editItem, deleteItem }) {
       {isEditing ? (
         <>
           <input type="text" value
-                ={newValue} onChange={handleChange} />
+                ={newValue} onChange={handleChange} required={true}/>
                 <button onClick={handleSave}>Salvar</button>
                 <button onClick={handleCancel}>Cancelar</button>
               </>

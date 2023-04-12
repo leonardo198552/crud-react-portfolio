@@ -16,7 +16,7 @@ function AddItem({ addItem }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" value={value} onChange={handleChange} />
+      <input type="text" value={value} onChange={handleChange} required={true}/>
       <button type="submit">Adicionar</button>
     </form>
   );
